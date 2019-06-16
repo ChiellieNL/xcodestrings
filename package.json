@@ -1,0 +1,47 @@
+{
+	"name": "xcodestrings",
+	"displayName": "Xcode strings",
+	"description": "Highlighting Xcode's .strings files",
+	"version": "1.0.0",
+	"publisher": "mhcpnl",
+	"author": {
+	  "name": "Michiel Horvers"
+	},
+	"categories": ["Programming Languages"],
+	"icon": "images/icon.png",
+	"galleryBanner": {
+	  "color": "#C80000",
+	  "theme": "dark"
+	},
+	"engines": {
+	  "vscode": "^1.22.0"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "strings",
+				"aliases": [
+					"strings"
+				],
+				"extensions": [
+					".strings"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "strings",
+				"scopeName": "source.strings",
+				"path": "./syntaxes/strings.tmLanguage.json"
+			}
+		]
+	},
+	"keywords": ["Xcode", "strings", "localization", "highlight"],
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/ChiellieNL/xcodestrings.git"
+	},
+	"homepage": "https://github.com/ChiellieNL/xcodestrings/blob/master/README.md"
+}
