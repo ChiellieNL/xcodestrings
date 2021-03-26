@@ -16,16 +16,22 @@
 		"keywords": {
 			"name": "keyword.control",
 			"begin": "^\"",
-			"end": "\""
+			"end": "(?<!\\\\)\"(?=\\s*=)",
+			"patterns": [
+				{
+					"name": "storage",
+					"match": "%[.0-9]*[$]?([fiduxogc@]|ld|lu|lx)"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double",
 			"begin": "\"",
-			"end": "\"",
+			"end": "(?<!\\\\)\"",
 			"patterns": [
 				{
 					"name": "storage",
-					"match": "%[.0-9]*([fduxogc@]|ld|lu|lx)"
+					"match": "%[.0-9]*[$]?([fiduxogc@]|ld|lu|lx)"
 				}
 			]
 		},
